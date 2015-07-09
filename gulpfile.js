@@ -18,7 +18,10 @@ gulp.task("default", ["webpack:build-dev"], function () {
 
     livereload.listen();
     gulp.watch([
-        "app/frontend/*"
+        "app/frontend/*",
+        "app/frontend/**/*",
+        "app/frontend/**/**/*",
+        "app/frontend/**/**/**/*"
     ], ["webpack:build-dev"]);
 });
 

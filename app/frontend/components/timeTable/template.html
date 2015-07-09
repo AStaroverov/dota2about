@@ -7,10 +7,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td class="mdl-data-table__cell--non-numeric">Empire</td>
+        <tr v-repeat="matches">
+            <td class="mdl-data-table__cell--non-numeric">{{ team1.team_name }}</td>
             <td style="text-align: center">V</td>
-            <td class="mdl-data-table__cell--non-numeric">VP</td>
+            <td class="mdl-data-table__cell--non-numeric">{{ team2.team_name }}</td>
         </tr>
     </tbody>
 </table>
