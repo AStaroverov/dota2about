@@ -7,17 +7,16 @@ module.exports = {
   template: require('./template.html'),
   data: function () {
     return {
-        matches: {},
+      matches: {}
     }
   },
   ready: function () {
     getMatches.then(function (data) {
-        this.matches = data.dd.data.matches;
+      this.matches = data.dd.data.matches;
+      this.$emit('data-loaded')
     }.bind(this))
   },
-  methods: {
-    toggleInfo: function (v) {
-      v.$$.info.classList.toggle('_active');
-    }
+  components: {
+    'vue-timetablerow': require('../timeTableRow')
   }
 };

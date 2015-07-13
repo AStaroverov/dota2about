@@ -1,28 +1,5 @@
 <div class="t-matches">
-<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-    <tbody class="t-matches-match"
-           v-repeat="matches">
-        <tr v-on="click: toggleInfo(this)">
-            <td>
-                {{ timediff | moment }}
-            </td>
-            <td>
-                <img src="http://dailydota2.com/{{ team1.logo_url }}"
-                     class="t-matches-logo" />
-            </td>
-            <td class="mdl-data-table__cell--non-numeric">{{ team1.team_name }}</td>
-            <td style="text-align: center">V</td>
-            <td>
-                <img src="http://dailydota2.com/{{ team2.logo_url }}"
-                     class="t-matches-logo" />
-            </td>
-            <td class="mdl-data-table__cell--non-numeric">{{ team2.team_name }}</td>
-        </tr>
-        <tr v-el="info" class="t-matches-info">
-            <td colspan="6">
-
-            </td>
-        </tr>
-    </tbody>
-</table>
+    <div class="t-matches-table mdl-data-table mdl-js-data-table mdl-shadow--4dp">
+        <vue-timeTableRow  v-repeat="match : matches" wait-for="data-loaded"></vue-timeTableRow>
+    </div>
 </div>

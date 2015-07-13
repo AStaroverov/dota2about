@@ -1,0 +1,36 @@
+<tbody class="t-matches-match"
+       v-class="t-matches-matchNow : live"
+       v-on="click: redirect">
+
+    <tr class="t-match-info" v-el="info">
+
+        <td class="t-match-time">
+            <span v-if="live">LIVE</span>
+            <span v-if="!live">{{ match.timediff | moment }}</span>
+        </td>
+
+        <td class="t-match-teamName">{{ match.team1.team_name }}</td>
+
+        <td class="t-match-logo">
+            <img src="http://dailydota2.com/{{ match.team1.logo_url }}"/>
+        </td>
+
+        <td class="t-match-state">
+            <span v-if="live">{{ match.team1.score }} : {{ match.team2.score }}</span>
+            <span v-if="!live">V</span>
+        </td>
+
+        <td class="t-match-logo">
+            <img src="http://dailydota2.com/{{ match.team2.logo_url }}"/>
+        </td>
+
+        <td class="t-match-teamName _2">{{ match.team2.team_name }}</td>
+
+        <td class="t-match-bo">
+            [Bo{{ match.series_type }}]
+        </td>
+        <td class="t-match-league">
+            {{ match.league.name }}
+        </td>
+    </tr>
+</div>
