@@ -1,0 +1,11 @@
+<div class="mdl-cell mdl-cell--4-col">
+    <div class="twitchCard mdl-card mdl-shadow--2dp"
+         v-on="click: redirect">
+        <div class="twitchCard-title mdl-card__title" v-style="background-image: 'url('+stream.preview.medium+')'">
+        </div>
+        <div class="twitchCard-supportingText mdl-card__supporting-text">
+            <h3 class="mdl-card__title-text">{{ stream.channel.display_name }}</h3>
+            <span class>{{ stream.viewers }} viewers</span>
+        </div>
+    </div>
+</div>

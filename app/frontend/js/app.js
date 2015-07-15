@@ -10,6 +10,7 @@ var app = new Vue({
   },
   components: {
     // define the main pages as async components.
-    'vue-timetable': require('../components/timeTable')
+    'vue-timetable': require('../components/timeTable'),
+    'vue-twitchtv': require('../components/twitch/block')
   }
 });
